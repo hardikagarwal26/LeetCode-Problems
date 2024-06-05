@@ -3,18 +3,15 @@ class Solution
 public:
     bool isPalindrome(int x) 
     {
-        int temp=x;
-        if(x<0)
-            return false;
-        long revn=0;
-        while(temp!=0)
+        long temp=x;
+        long ans=0;
+        while(x!=0)
         {
-            int d= temp%10;
-            revn = revn *10 + d;
-            temp = temp/10;
+            ans = ans*10 + x%10;
+            x/=10;
         }
-        if(revn==x)
-            return true;
+        if(temp == ans && temp>=0)
+        return true;
         return false;
     }
 };
