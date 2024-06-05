@@ -1,13 +1,15 @@
 class Solution {
 public:
     bool isPalindrome(string s) {
-        int left = 0;
-        int right = s.length() - 1;
-        while(left < right) {
-            if(!isalnum(s[left])) left++; // Ignore if not alphanumeric
-            else if(!isalnum(s[right])) right--; // Ignore if not alphanumeric
+        int left=0;
+        int right=s.length()-1;
+        while(left<right)
+        {
+            if(!isalnum(s[left])) left++;
+            else if(!isalnum(s[right])) right--;
             else if(tolower(s[left]) != tolower(s[right])) return false;
-            else {
+            else
+            {
                 left++;
                 right--;
             }
