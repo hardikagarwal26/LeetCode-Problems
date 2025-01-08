@@ -8,8 +8,8 @@ class Solution:
         if head is None or head.next is None:
             return head
         odd = head
-        evhead = head.next
         even = head.next
+        evhead = head.next
         while even and even.next:
             odd.next = odd.next.next
             even.next = even.next.next
