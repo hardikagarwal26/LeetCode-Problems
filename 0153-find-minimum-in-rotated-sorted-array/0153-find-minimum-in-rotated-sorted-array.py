@@ -6,7 +6,7 @@ class Solution:
         
         while start <= end :
             if nums[start] < nums[end]:
-                res =  min(res,nums[0])
+                res =  min(res,nums[start])
                 break
             mid = (start + end)//2
             res = min(res , nums[mid])
